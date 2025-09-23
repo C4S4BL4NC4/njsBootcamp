@@ -1,4 +1,6 @@
-A [[Section 2]] Module to used to interact with the web SENDING GET AND POST requests.
+[[Node Farm]]
+
+A  Module to used to interact with the web SENDING GET AND POST requests.
 
 ### Import the library:
 

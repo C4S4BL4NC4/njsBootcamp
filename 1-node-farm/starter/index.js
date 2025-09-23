@@ -105,10 +105,11 @@ const tempCard = fs.readFileSync(
 
 // Starting Server
 const server = http.createServer((req, res) => {
-  console.log(req.url);
-  console.log(url.parse());
+  const { query, pathname } = url.parse(req.url, true);
 
-  const pathWay = req.url;
+  console.log(query, "|||", pathname);
+
+  const pathWay = pathname;
 
   // Rendering stuff
 
@@ -132,7 +133,9 @@ const server = http.createServer((req, res) => {
       "content-type": "text/html",
     });
 
-    res.end(tempProduct);
+    const product = dataObj[query.id];
+    const output = replaceTemplate(tempProduct, product);
+    res.end(output);
   }
 
   // API
