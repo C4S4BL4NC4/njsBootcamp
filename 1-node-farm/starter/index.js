@@ -1,5 +1,6 @@
 const fs = require("fs");
 const http = require("http");
+const url = require("url");
 
 //////////////////////////////////
 // FILES
@@ -32,9 +33,24 @@ const http = require("http");
 // WEB SERVER
 
 const server = http.createServer((req, res) => {
-  res.end("Hello from Server!"); // Sending back a plain text simple response.
+  const pathWay = req.url;
+
+  if (pathWay === "/overview") {
+    res.end("This is the OVERVIEW");
+  } else if (pathWay === "/product") {
+    res.end("This is the PRODUCT");
+  } else {
+    res.writeHead(404, {
+      "Content-type": "text/html",
+    });
+    res.end("<h1>Page not found!!</h1>");
+  }
+  // Sending back a plain text simple response.
 });
 
 server.listen(8000, "127.0.0.1", () => {
   console.log("Server Has Started listening to req ons port 127.0.0.1:8000");
 }); // Listen to requests on Port(8000), IP(127.0.0.1 localhost), callback that executes when listen is executed
+
+///////////////////////////
+// Url routing
