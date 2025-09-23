@@ -30,6 +30,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(404, {
 
       "Content-type": "text/html",
+      "my-own-header": "micron",
 
     }); // To write a header that has some options 
 
@@ -49,6 +50,17 @@ server.listen(8000, "127.0.0.1", () => {
 
 });
 ```
+
+==we can also use `__dirname` with a string literal to specify the current directory instead of the `./`== 
+e.g. 
+`${__dirname}/dev-data/data.json`
+
+
+##### For ==`'Content-type'`== 
+- `"text/html",
+- `"application/json"`
+
+
 
 
 
