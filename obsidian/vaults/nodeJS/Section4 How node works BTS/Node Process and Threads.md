@@ -13,7 +13,7 @@
 
 #### Thread Pool:
 #threadPool is provided via the #libuv library, and it provide us with extra separate threads that are independent from the main #singleExecutionThread.
-
+To change the size of the #threadPool use `process.env.UV_THREADPOOL_SIZE = 0`
 
 #### Event Loop Ticks, Queues, and Priorities :![[EventLoop.png]]
 ![[eventLoopTicks.png]]
