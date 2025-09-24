@@ -1,4 +1,5 @@
 const fs = require("fs");
+const crypto = require("crypto");
 
 setTimeout(() => console.log("Timer 1 finished"), 0); // Expired
 setTimeout(() => console.log("Immediate 1 finished")); // Immediate
