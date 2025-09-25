@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Express/RestFUL API.md",
+                "file": "Express/Express Framework.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RestFUL API"
+              "title": "Express Framework"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "938dfcf2c7a5ee2a",
@@ -170,8 +171,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "98ada4f062264319",
+  "active": "6ff55257aec30cbf",
   "lastOpenFiles": [
+    "TypeScript.md",
     "Express/Express Framework.md",
     "Express/RestFUL API.md",
     "Section1/Useful.md",
